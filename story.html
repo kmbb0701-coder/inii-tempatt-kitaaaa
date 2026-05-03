@@ -1,0 +1,97 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerita Kita</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Georgia', serif;
+      background: #2b2118;
+      color: #f5e6d3;
+      text-align: center;
+    }
+
+    .story-box {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      padding: 40px 30px;
+      border-radius: 20px;
+      line-height: 1.8;
+      border: 12px solid #4a3428;
+      position: relative;
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.04) 0px,
+        rgba(255,255,255,0.04) 8px,
+        transparent 8px,
+        transparent 16px
+      );
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    h2 {
+      color: #d2b48c;
+      margin-bottom: 20px;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: #4a3428;
+      color: #f5e6d3;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+    <audio autoplay loop>
+    <source src="Iwan Fals - Jendela Kelas 1 (Official Lyric Video).mp3" type="audio/mpeg">
+  </audio>
+  <div class="story-box">
+    <h2>awal cerita kita ✨</h2>
+    
+    <p id="typing-text"></p>
+
+    <script>
+      const text = `semua bermulai di hari itu akuu lagii ngelamunn karna cape,
+      terus tibaa tibaa kamuu lewatt dan ini memang aga anehh sii.pass kamu lewat
+      ituu akuu kayaa ngerasaa bedaa gituu,kayaa tibaa tibaa sukaa samaa kamuu
+      tapi dii saat ituu akuu ngiraa nyaa kamuu lagii deket sama orang dan juga aku mikir
+      kali ini perasaan lewat ajaa tapii ternyata itu engga,berjalan nyaa waktuu setiap akuu liatt kamuu
+      dii kelass ngerasa bedaa,kayaa kamuu jadi orang sepesial bagi aku dan jalan berapa hari,
+      di situ akuu mulai penasarann akuu nanyaa ke mba monisa teruss minta saran gimna 
+      awal nyaa akuu ragu.tapii akuu kumpulinn keberanian akuu untukk ngungkapin,aku ngiranya
+      aku bakalan di tolakk ee ga tauu nyaa kamuu nerimaa akuu,yaa memangg agaa rendemm akuu
+      akuu jugaa awall nyaa bingungg samaa perasaan kuu tapii lamaa makinn lama makinn dalemm,
+      dann setelahh sama kamuu rasaa ituu semakinn dalemm akuu senengg bisaa ketemuu kaamuu cayangg kuu.`;
+
+      let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById('typing-text').innerHTML += 
+      text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+
+    i++;
+    setTimeout(typeWriter, 45);
+  }
+}
+
+      window.onload = typeWriter;
+    </script>
+
+    <button class="next-btn" onclick="window.location.href='gallery.html'">
+      lanjut ke galeri 📸
+    </button>
+  </div>
+</body>
+</html>

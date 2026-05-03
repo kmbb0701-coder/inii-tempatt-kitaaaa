@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #2b2118;
+      color: #f5e6d3;
+      padding: 20px;
+    }
+
+    .box {
+      max-width: 700px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #d2b48c;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .enter-btn {
+      background: #4a3428;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.08) 0px,
+        rgba(255,255,255,0.08) 6px,
+        transparent 6px,
+        transparent 12px
+      );
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>haii, selamat dateng yaa 💖</h1>
+    <p>
+      di sini isinya banyak cerita seru,<br>
+      momen random, tawa receh,<br>
+      dan kenangan manis yang sayang banget kalau dilupain.<br><br>
+      web kecil ini cuma jadi tempat<br>
+      buat nyimpen semua hal indah itu ✨
+    </p>
+
+    <button class="enter-btn" onclick="window.location.href='story.html'">
+      mulai cerita kita 🎞️
+    </button>
+  </div>
+  <script>
+    function goToGallery() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = '0.8s ease';
+
+      setTimeout(() => {
+        window.location.href = 'gallery.html';
+      }, 700);
+    }
+
+    window.onload = () => {
+      document.body.style.opacity = '1';
+    };
+  </script>
+</body>
+</html>
+
+
+
